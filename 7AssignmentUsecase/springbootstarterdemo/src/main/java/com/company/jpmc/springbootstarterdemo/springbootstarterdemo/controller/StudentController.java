@@ -12,19 +12,5 @@ public class StudentController {
     @Autowired
     private StudentServiceInterface studentServiceInterface;
 
-    @RequestMapping(value = "/savestudent")
-    public String save(Student student){
-        student.setStudent_name("Suersh");
-        student.setStudent_age(26);
-        student.setStudent_email("suresh26@gmail.com");
-        
-        try {
-            studentServiceInterface.save(student);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "error";
-        }
-        return null;
-    }
     
 }
